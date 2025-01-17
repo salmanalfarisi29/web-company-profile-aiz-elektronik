@@ -1,11 +1,11 @@
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 // import Signindialog from './Signindialog';
 import Image from 'next/image';
+import React, { useState } from "react";
 
 interface NavigationItem {
     name: string;
@@ -27,6 +27,10 @@ function classNames(...classes: string[]) {
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = React.useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const whatsappNumber = "6285716294985";
+    const whatsappMessage = "Halo, saya tertarik dengan layanan Anda!";
 
     return (
         <Disclosure as="nav" className="navbar">
@@ -38,45 +42,54 @@ const Navbar = () => {
                             {/* LOGO */}
 
                             <div className="flex sm:hidden flex-shrink-0 items-center border-right">
-                                <Image src="/images/Logo/Logo.svg" alt="logo" width={36} height={36} />
+                                <Image src="/images/Logo/Logo.svg" alt="logo" width={92} height={92} />
                                 <Link href="/" className='text-2xl font-semibold text-black ml-4'>
-                                    Aiz Elektronik.
+                                    {/* Aiz Elektronik. */}
                                 </Link>
                             </div>
                             <div className="hidden sm:flex flex-shrink-0 items-center border-right">
-                                <Image src="/images/Logo/Logo.svg" alt="logo" width={56} height={56} />
+                                <Image src="/images/Logo/Logo.svg" alt="logo" width={144} height={144} />
                                 <Link href="/" className='text-2xl font-semibold text-black ml-4'>
-                                    Aiz Elektronik.
+                                    {/* Aiz Elektronik. */}
                                 </Link>
                             </div>
 
                             {/* LINKS */}
 
-                            <div className="hidden lg:flex items-center border-right ">
+                            <div className="hidden lg:flex items-center border-right">
                                 <div className="flex justify-end space-x-4">
                                     {navigation.map((item) => (
                                         <Link
                                             key={item.name}
                                             href={item.href}
                                             className={classNames(
-                                                item.current ? 'bg-black' : 'navlinks hover:opacity-100',
-                                                'px-3 py-4 rounded-md text-lg font-normal opacity-50 hover:text-black space-links'
+                                                item.current ? 'bg-black text-white' : 'text-black hover:text-gray-800',
+                                                'px-3 py-4 rounded-md text-lg font-normal space-links'
                                             )}
-                                            aria-current={item.href ? 'page' : undefined}
+                                            aria-current={item.current ? 'page' : undefined}
                                         >
                                             {item.name}
                                         </Link>
                                     ))}
                                 </div>
-
                             </div>
-                            <div className='gap-6 hidden lg:flex'>
-                                <div className='flex items-center gap-2'>
-                                    <Image src={'/images/Navbar/phone.svg'} alt="phone-image" width={19} height={19} />
-                                    <p className='text-lg font-medium'>+62 235-9814</p>
-                                </div>
-                                {/* <button className='flex justify-end text-xl font-medium bg-bgpink text-pink py-4 px-4 lg:px-8 navbutton rounded-full hover:text-black'>Sign in</button> */}
-                                {/* <Signindialog /> */}
+                            <div className="gap-6 hidden lg:flex">
+                                <a
+                                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-white bg-[#1B71A1] py-2 px-4 rounded-md hover:bg-white hover:text-[#1B71A1] border hover:border-[#1B71A1] transition-all duration-300"
+                                    onMouseEnter={() => setIsHovered(true)} // Saat mouse masuk
+                                    onMouseLeave={() => setIsHovered(false)} // Saat mouse keluar
+                                >
+                                    <Image
+                                        src={isHovered ? '/images/Navbar/phone2.svg' : '/images/Navbar/phone.svg'} // Ganti src berdasarkan hover
+                                        alt="phone-image"
+                                        width={19}
+                                        height={19}
+                                    />
+                                    <span className="text-lg font-medium">Hubungi</span>
+                                </a>
                             </div>
                         </div>
 

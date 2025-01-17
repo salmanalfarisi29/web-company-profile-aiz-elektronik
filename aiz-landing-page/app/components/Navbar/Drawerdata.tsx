@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import Contactusform from "./Contactus";
+import Image from "next/image";
 
 interface NavigationItem {
     name: string;
@@ -9,18 +9,23 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'Home', href: '#home-section', current: false },
-    { name: 'About us', href: '#about-section', current: false },
-    { name: 'Recipe', href: '#cook-section', current: false },
-    { name: 'Gallery', href: '#gallery-section', current: false },
-]
-
+    { name: 'Beranda', href: '#home-section', current: false },
+    { name: 'Tentang Kami', href: '#cook-section', current: false },
+    { name: 'Layanan', href: '#about-section', current: false },
+    { name: 'Portofolio', href: '#gallery-section', current: false },
+];
 
 function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ')
+    return classes.filter(Boolean).join(' ');
 }
 
 const Data = () => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    // Nomor WhatsApp dan pesan default
+    const whatsappNumber = "6281234567890"; // Ganti dengan nomor WhatsApp Anda
+    const whatsappMessage = "Halo, saya ingin bertanya tentang layanan Anda!"; // Pesan default
+
     return (
         <div className="rounded-md max-w-sm w-full mx-auto">
             <div className="flex-1 space-y-4 py-1">
@@ -32,23 +37,38 @@ const Data = () => {
                                 href={item.href}
                                 className={classNames(
                                     item.current ? 'bg-gray-900 text-purple' : 'text-black hover:bg-gray-700 hover:text-purple',
-                                    'block  py-2 rounded-md text-base font-medium'
+                                    'block py-2 rounded-md text-base font-medium'
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
                             >
                                 {item.name}
                             </Link>
                         ))}
-                        <div className="mt-4"></div>
-                        <button className='flex justify-center text-base w-full font-medium rounded-full bg-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white'>Sign in</button>
-                        <button className='flex justify-center text-base w-full font-medium rounded-full bg-transparent border border-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white hover:bg-pink'>Contact us</button>
 
-                        {/* <Contactusform /> */}
+                        <div className="mt-4"></div>
+
+                        {/* Tombol Hubungi */}
+                        <a
+                            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 text-white bg-[#1B71A1] py-2 px-4 rounded-full hover:bg-white hover:text-[#1B71A1] border hover:border-[#1B71A1] transition-all duration-300"
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                        >
+                            <Image
+                                src={isHovered ? '/images/Navbar/phone2.svg' : '/images/Navbar/phone.svg'} // Ganti logo berdasarkan hover
+                                alt="phone-icon"
+                                width={19}
+                                height={19}
+                            />
+                            <span className="text-lg font-medium">Hubungi</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Data;

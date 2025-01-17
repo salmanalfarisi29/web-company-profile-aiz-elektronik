@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import Link from "next/link";
 import Image from 'next/image';
 
 
@@ -32,10 +31,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
                     <header className="px-4 py-4 flex items-center justify-between">
 
                         <div className="flex flex-shrink-0 items-center border-right">
-                            <Image src="/images/Logo/Logo.svg" alt="logo" width={36} height={36} />
-                            <Link href="/" className='text-2xl font-semibold text-black ml-4'>
-                                Chef&apos;s Kitchen.
-                            </Link>
+                            <Image src="/images/Logo/Logo.svg" alt="logo" width={104} height={104} />
                         </div>
 
                         <XMarkIcon className="block h-6 w-6" onClick={() => {

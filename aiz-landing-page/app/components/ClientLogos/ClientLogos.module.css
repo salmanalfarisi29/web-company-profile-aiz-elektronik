@@ -1,0 +1,31 @@
+.overflow-hidden {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.slick-slider {
+display: flex !important;
+justify-content: center !important;
+align-items: center !important;
+}
+
+.slick-slide {
+display: flex !important;
+flex-direction: column !important;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.w-28.h-28 {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+
+.text-sm {
+text-align: center;
+margin-top: 0.5rem;
+}
