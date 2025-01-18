@@ -36,8 +36,8 @@ const cardData: cardDataType[] = [
 const Work = () => {
     return (
         <div>
-            <div className='mx-auto max-w-7xl py-40 px-6' id="about-section">
-                <div className='text-center mb-8'>
+            <div className='mx-auto max-w-7xl py-20 px-6' id="about-section">
+                <div className='text-center'>
                     <Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
                         <h3 className='text-[#1B71A1] text-lg font-normal mb-3 ls-51 uppercase'>Layanan</h3>
                     </Fade>
