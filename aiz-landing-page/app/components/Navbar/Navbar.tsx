@@ -18,7 +18,7 @@ const navigation: NavigationItem[] = [
     { name: 'Tentang Kami', href: '#cook-section', current: false },
     { name: 'Layanan', href: '#about-section', current: false },
     { name: 'Klien', href: '#client-section', current: false },
-    { name: 'Lokasi', href: '#gallery-section', current: false },
+    { name: 'Lokasi', href: '#location-section', current: false },
     { name: 'Galeri', href: '#gallery-section', current: false },
 ]
 
@@ -32,7 +32,7 @@ const Navbar = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const whatsappNumber = "6285716294985";
-    const whatsappMessage = "Halo, saya tertarik dengan layanan Anda!";
+    const whatsappMessage = "Halo, saya tertarik dengan layanan Aiz Elektronik. Mohon informasi lebih lanjut!";
 
     return (
         <Disclosure as="nav" className="navbar">
@@ -76,22 +76,22 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className="gap-6 hidden lg:flex">
-                                <a
-                                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-white bg-[#1B71A1] py-2 px-4 rounded-md hover:bg-white hover:text-[#1B71A1] border hover:border-[#1B71A1] transition-all duration-300"
-                                    onMouseEnter={() => setIsHovered(true)} // Saat mouse masuk
-                                    onMouseLeave={() => setIsHovered(false)} // Saat mouse keluar
-                                >
-                                    <Image
-                                        src={isHovered ? '/images/Navbar/phone2.svg' : '/images/Navbar/phone.svg'} // Ganti src berdasarkan hover
-                                        alt="phone-image"
-                                        width={19}
-                                        height={19}
-                                    />
-                                    <span className="text-lg font-medium">Hubungi</span>
-                                </a>
+                            <a
+                                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-white bg-[#1B71A1] py-2 px-6 rounded-md hover:bg-white hover:text-[#1B71A1] border hover:border-[#1B71A1] shadow-md transition-all duration-300 transform hover:scale-105"
+                                onMouseEnter={() => setIsHovered(true)} // Saat mouse masuk
+                                onMouseLeave={() => setIsHovered(false)} // Saat mouse keluar
+                            >
+                                <Image
+                                    src={isHovered ? '/images/Navbar/phone2.svg' : '/images/Navbar/phone.svg'} // Ganti src berdasarkan hover
+                                    alt="phone-image"
+                                    width={20}
+                                    height={20}
+                                />
+                                <span className="text-lg font-semibold">Hubungi</span>
+                            </a>
                             </div>
                         </div>
 

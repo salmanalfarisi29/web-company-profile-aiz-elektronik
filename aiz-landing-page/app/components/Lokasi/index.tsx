@@ -31,7 +31,7 @@ const Location = () => {
         <Fade direction="up" delay={600} triggerOnce>
           <div className="relative overflow-hidden rounded-3xl shadow-lg">
             <iframe
-              src="https://maps.google.com/maps?q=-6.200000,106.816666&z=15&output=embed"
+              src="https://maps.google.com/maps?q=-6.202737,106.772348&z=15&output=embed" // Koordinat Jakarta Barat
               width="100%"
               height="450"
               allowFullScreen
@@ -39,21 +39,24 @@ const Location = () => {
               className="rounded-3xl border-0"
               title="Lokasi Kami"
             ></iframe>
-            <div className="absolute bottom-4 left-4 bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
-              <h4 className="text-black text-lg font-semibold">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-90 p-4 rounded-lg shadow-md w-[90%] sm:w-auto max-w-md sm:max-w-[calc(100%-2rem)]">
+              <h4 className="text-black text-lg font-semibold text-center">
                 Lokasi Kantor Kami
               </h4>
-              <p className="text-gray-700 text-sm">
-                <strong>Alamat:</strong> Jl. H. Mandor Salim, RT.04/02/RW.no 11, Srengseng, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630
+              <p className="text-gray-700 text-sm text-center">
+                <strong>Alamat:</strong> Jl. H. Mandor Salim, RT.04/02/RW.no 11, Srengseng,
+                Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630
               </p>
-              <a
-                href="https://maps.app.goo.gl/17LzyiFXfGiW9JCcA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-block bg-pink-500 text-white px-4 py-2 rounded-lg shadow hover:bg-pink-600"
-              >
-                Lihat di Google Maps
-              </a>
+              <div className="flex justify-center mt-4">
+                <a
+                  href="https://maps.app.goo.gl/17LzyiFXfGiW9JCcA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-500 text-black px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
+                >
+                  Lihat di Google Maps
+                </a>
+              </div>
             </div>
           </div>
         </Fade>

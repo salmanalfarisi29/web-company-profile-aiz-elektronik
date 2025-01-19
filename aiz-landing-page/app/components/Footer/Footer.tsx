@@ -64,7 +64,7 @@ const footer = () => {
                     <div className="flex flex-shrink-0 items-center border-right">
                         <Image src="/images/Logo/Logo.svg" alt="logo" width={56} height={56} />
                         <Link href="/" className='text-2xl font-semibold text-black ml-4'>
-                            Chef&apos;s Kitchen.
+                            Aiz Elektronik.
                         </Link>
                     </div>
                     <h3 className='text-textbl text-xs font-medium mt-5 mb-4 lg:mb-16'> Open an account in minutes, get full financial <br /> control for much longer.</h3>
