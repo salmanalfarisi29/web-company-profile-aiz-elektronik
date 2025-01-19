@@ -25,8 +25,8 @@ const Data = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     // Nomor WhatsApp dan pesan default
-    const whatsappNumber = "6281234567890"; // Ganti dengan nomor WhatsApp Anda
-    const whatsappMessage = "Halo, saya ingin bertanya tentang layanan Anda!"; // Pesan default
+    const whatsappNumber = "6285716294985"; // Ganti dengan nomor WhatsApp Anda
+    const whatsappMessage = "Halo, saya tertarik dengan layanan Aiz Elektronik. Mohon informasi lebih lanjut!"; // Pesan default
 
     return (
         <div className="rounded-md max-w-sm w-full mx-auto">
@@ -59,7 +59,7 @@ const Data = () => {
                             onMouseLeave={() => setIsHovered(false)}
                         >
                             <Image
-                                src={isHovered ? '/images/Navbar/phone2.svg' : '/images/Navbar/phone.svg'} // Ganti logo berdasarkan hover
+                                src={isHovered ? '/images/Navbar/whatsapp.svg' : '/images/Navbar/whatsapp-2.svg'} // Ganti logo berdasarkan hover
                                 alt="phone-icon"
                                 width={19}
                                 height={19}
