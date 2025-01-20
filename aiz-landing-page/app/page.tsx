@@ -6,6 +6,7 @@ import Gallery from './components/Gallery/index';
 import Newsletter from './components/Newsletter/Newsletter';
 import ClientLogos from "./components/ClientLogos";
 import Lokasi from "./components/Lokasi";
+import Ups from "./components/Ups";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Banner />
       <Cook />
       <Features />
+      <Ups />
       <ClientLogos />
       <Lokasi />
       {/* <Expert /> */}

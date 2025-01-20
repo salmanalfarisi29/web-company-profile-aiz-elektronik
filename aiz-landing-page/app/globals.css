@@ -109,5 +109,33 @@ html:not([data-scroll="0"]) .navbar {
   padding-right: 87px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: darkgray; /* Warna tombol abu-abu */
+  transform: translateY(-50%); /* Memastikan tombol berada di tengah secara vertikal */
+  width: 48px; /* Ukuran tombol */
+  height: 48px;
+}
+
+.swiper-button-next {
+  right: 15px; /* Jarak dari sisi kanan */
+}
+
+.swiper-button-prev {
+  left: 15px; /* Jarak dari sisi kiri */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: darkgray; /* Warna lebih gelap saat hover */
+}
+
+.swiper {
+  position: relative;
+  overflow: hidden; /* Menjaga agar konten tetap di dalam area swiper */
+}
+
+
+
 
 
