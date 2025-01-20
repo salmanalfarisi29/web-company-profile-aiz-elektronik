@@ -14,26 +14,62 @@ const Banner = () => {
     "Halo, saya tertarik dengan layanan Aiz Elektronik. Mohon informasi lebih lanjut!";
   const [isHovered, setIsHovered] = React.useState(false);
 
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault(); // Mencegah perilaku default
+  
+    // Deteksi apakah pengguna menggunakan perangkat mobile
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+    // WhatsApp Web untuk desktop
+    const desktopLink = `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+  
+    // WhatsApp Mobile untuk perangkat mobile
+    const mobileLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+  
+    // Deep link untuk WhatsApp Desktop (fallback pertama)
+    const desktopDeepLink = `whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+  
+    // Jika di perangkat mobile, buka WhatsApp Mobile; jika tidak, coba Desktop Deep Link
+    if (isMobile) {
+      window.open(mobileLink, "_blank");
+    } else {
+      const newWindow = window.open(desktopDeepLink, "_blank");
+  
+      // Jika deep link gagal, fallback ke WhatsApp Web setelah jeda
+      setTimeout(() => {
+        if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+          window.open(desktopLink, "_blank");
+        }
+      }, 1000);
+    }
+  };
+  
   const carouselData = [
     {
       image: "/images/Banner/banner-image-1.png",
-      title: "Konsultasi Gratis",
-      description: "Tanyakan masalah elektronik Anda secara gratis.",
+      title: "Teknisi Sudah Sangat Berpengalaman",
+      description: "",
     },
     {
       image: "/images/Banner/banner-image-2.png",
       title: "Layanan Antar-Jemput Barang",
-      description: "Kami menyediakan layanan antar-jemput barang untuk kenyamanan Anda.",
+      description: "",
     },
     {
       image: "/images/Banner/banner-image-3.png",
       title: "Bisa Melayani di Tempat (On-Site)",
-      description: "Teknisi kami siap memperbaiki perangkat Anda langsung di tempat.",
+      description: "",
     },
     {
       image: "/images/Banner/banner-image-4.png",
       title: "Banyak Promo dan Diskon",
-      description: "Nikmati berbagai promo dan diskon menarik untuk layanan kami.",
+      description: "",
     },
   ];
 
@@ -47,7 +83,7 @@ const Banner = () => {
               Solusi Terbaik <br /> untuk Perbaikan Elektronik Anda
             </h1>
             <p className="text-gray-700 lg:text-lg text-base font-normal mb-10 lg:text-start text-center">
-              Aiz Elektronik adalah penyedia jasa servis elektronik terpercaya di Jakarta Barat. 
+              Aiz Elektronik adalah penyedia jasa servis elektronik terpercaya di Jakarta Barat.
               Kami melayani berbagai kebutuhan perbaikan elektronik rumah tangga dan kantor.
               <br />
               <br />
@@ -55,11 +91,7 @@ const Banner = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-6 justify-center lg:justify-start">
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                  whatsappMessage
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={handleWhatsAppClick}
                 className="flex items-center justify-center gap-2 text-white bg-[#1B71A1] py-4 px-8 rounded-full hover:bg-white hover:text-[#1B71A1] border hover:border-[#1B71A1] shadow-lg transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -80,7 +112,7 @@ const Banner = () => {
                 href="#cook-section"
                 className="flex items-center justify-center border border-[#1B71A1] py-4 px-8 rounded-full text-lg font-medium text-[#1B71A1] hover:text-white hover:bg-[#1B71A1] shadow-lg transition-all duration-300 w-full md:w-auto"
               >
-                Info lebih lanjut
+                Info lainnya
               </Link>
             </div>
           </div>
@@ -120,9 +152,6 @@ const Banner = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            {/* Custom Navigation Buttons */}
-            {/* <div className="swiper-button-prev !text-gray-500 hover:!text-gray-700"></div>
-            <div className="swiper-button-next !text-gray-500 hover:!text-gray-700"></div> */}
           </div>
         </div>
       </div>
