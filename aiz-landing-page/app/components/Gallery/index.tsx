@@ -96,26 +96,34 @@ const Gallery = () => {
         </Fade>
         {/* Modal */}
         {selectedImage && (
-          <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
-            {/* Tombol Close di Luar Modal */}
-            <button
-              onClick={closeModal}
-              className="absolute top-6 right-6 text-white text-3xl font-bold bg-gray-800 bg-opacity-70 rounded-full p-3 hover:bg-opacity-100 transition duration-300"
-            >
-              &times;
-            </button>
-            {/* Kontainer Modal */}
-            <div className="relative bg-white rounded-lg p-6 shadow-2xl w-[90%] max-w-3xl">
-              <Image
-                src={selectedImage}
-                alt="Selected"
-                width={1000}
-                height={800}
-                className="rounded-lg"
-              />
-            </div>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+          onClick={(e) => {
+            // Tutup modal hanya jika pengguna mengklik overlay, bukan modal konten
+            if (e.target === e.currentTarget) {
+              closeModal();
+            }
+          }}
+        >
+          {/* Tombol Close di Luar Modal */}
+          <button
+            onClick={closeModal}
+            className="absolute top-6 right-6 text-white text-3xl font-bold bg-gray-800 bg-opacity-70 rounded-full p-3 hover:bg-opacity-100 transition duration-300"
+          >
+            &times;
+          </button>
+          {/* Kontainer Modal */}
+          <div className="relative bg-white rounded-lg p-6 shadow-2xl w-[90%] max-w-3xl">
+            <Image
+              src={selectedImage}
+              alt="Selected"
+              width={1000}
+              height={800}
+              className="rounded-lg"
+            />
           </div>
-        )}
+        </div>
+      )}
       </div>
     </div>
   );
