@@ -3,7 +3,7 @@ import Features from './components/Work/index';
 import Cook from './components/Cook/index';
 // import Expert from './components/Expert/index';
 import Gallery from './components/Gallery/index';
-import Newsletter from './components/Newsletter/Newsletter';
+// import Newsletter from './components/Newsletter/Newsletter';
 import ClientLogos from "./components/ClientLogos";
 import Lokasi from "./components/Lokasi";
 import Ups from "./components/Ups";
@@ -20,7 +20,7 @@ export default function Home() {
       <Lokasi />
       {/* <Expert /> */}
       <Gallery />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </main>
   )
 }

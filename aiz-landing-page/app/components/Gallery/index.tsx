@@ -30,6 +30,7 @@ const Gallery = () => {
           </Fade>
         </div>
 
+        <Fade direction={"up"} delay={1200} cascade damping={1e-1} triggerOnce={true}>
         <div className="grid grid-cols-1 md:grid-cols-12 my-16 sm:space-x-6 space-y-6 md:space-y-0 px-6">
           {/* Gambar Besar */}
           <div
@@ -92,7 +93,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-
+        </Fade>
         {/* Modal */}
         {selectedImage && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">

@@ -18,22 +18,22 @@ const Banner = () => {
     {
       image: "/images/Banner/banner-image-1.png",
       title: "Konsultasi Gratis",
-      description: "",
+      description: "Tanyakan masalah elektronik Anda secara gratis.",
     },
     {
       image: "/images/Banner/banner-image-2.png",
       title: "Layanan Antar-Jemput Barang",
-      description: "",
+      description: "Kami menyediakan layanan antar-jemput barang untuk kenyamanan Anda.",
     },
     {
       image: "/images/Banner/banner-image-3.png",
       title: "Bisa Melayani di Tempat (On-Site)",
-      description: "",
+      description: "Teknisi kami siap memperbaiki perangkat Anda langsung di tempat.",
     },
     {
       image: "/images/Banner/banner-image-4.png",
       title: "Banyak Promo dan Diskon",
-      description: "",
+      description: "Nikmati berbagai promo dan diskon menarik untuk layanan kami.",
     },
   ];
 
@@ -47,9 +47,11 @@ const Banner = () => {
               Solusi Terbaik <br /> untuk Perbaikan Elektronik Anda
             </h1>
             <p className="text-gray-700 lg:text-lg text-base font-normal mb-10 lg:text-start text-center">
-              Aiz Elektronik adalah penyedia jasa servis elektronik terpercaya
-              di Jakarta Barat. Kami melayani berbagai kebutuhan perbaikan
-              elektronik rumah tangga dan kantor.
+              Aiz Elektronik adalah penyedia jasa servis elektronik terpercaya di Jakarta Barat. 
+              Kami melayani berbagai kebutuhan perbaikan elektronik rumah tangga dan kantor.
+              <br />
+              <br />
+              Elektronik Anda Rusak? Kami Solusinya, Gratis Konsultasi Sekarang!
             </p>
             <div className="flex flex-col md:flex-row gap-6 justify-center lg:justify-start">
               <a
@@ -85,39 +87,42 @@ const Banner = () => {
 
           {/* Right Content - Carousel */}
           <div className="col-span-6">
-          <Swiper
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            modules={[Navigation, Autoplay]}
-            className="mySwiper"
-          >
-            {carouselData.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative flex justify-center items-center overflow-hidden rounded-xl shadow-2xl">
-                  <Image
-                    src={item.image}
-                    alt={`banner-${index}`}
-                    width={800}
-                    height={600}
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white p-6">
-                    <h2 className="text-3xl font-bold mb-4">{item.title}</h2>
-                    <p className="text-lg font-light text-center max-w-md">
-                      {item.description}
-                    </p>
+            <Swiper
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              modules={[Navigation, Autoplay]}
+              className="mySwiper"
+            >
+              {carouselData.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative flex justify-center items-center overflow-hidden rounded-xl shadow-2xl">
+                    <Image
+                      src={item.image}
+                      alt={`banner-${index}`}
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white p-6">
+                      <h2 className="text-3xl font-bold mb-4">{item.title}</h2>
+                      <p className="text-lg font-light text-center max-w-md">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            {/* Custom Navigation Buttons */}
+            {/* <div className="swiper-button-prev !text-gray-500 hover:!text-gray-700"></div>
+            <div className="swiper-button-next !text-gray-500 hover:!text-gray-700"></div> */}
           </div>
         </div>
       </div>

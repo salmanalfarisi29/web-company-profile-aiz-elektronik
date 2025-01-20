@@ -62,14 +62,14 @@ const Cook = () => {
               </h3>
             </Fade>
             <Fade direction="up" delay={1000} cascade damping={1e-1} triggerOnce>
-              <p className="text-grey md:text-lg font-normal mb-8 text-start">
+              <p className="text-black md:text-lg font-normal mb-8 text-start">
                 Aiz Elektronik adalah perusahaan yang bergerak di bidang jasa
                 servis elektronik. Kami melayani perbaikan dan pemeliharaan
                 perangkat elektronik kantor seperti mesin penghancur kertas,
                 mesin penghitung uang, mesin absensi, serta perangkat rumah
                 tangga seperti mesin cuci, TV LED, dan lainnya.
               </p>
-              <p className="text-grey md:text-lg font-normal mb-12 text-start">
+              <p className="text-black md:text-lg font-normal mb-12 text-start">
                 Dengan tim teknisi berpengalaman, kami berkomitmen untuk
                 memberikan layanan terbaik kepada pelanggan.
               </p>
