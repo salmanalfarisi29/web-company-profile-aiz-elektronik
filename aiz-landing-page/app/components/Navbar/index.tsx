@@ -1,44 +1,125 @@
-"use client"
-import Navbar from './Navbar';
-import React, { useEffect } from 'react';
+"use client";
 
-const Navbarin: React.FC = () => {
-    useEffect(() => {
-        // The debounce function receives our function as a parameter
-        const debounce = (fn: Function) => {
-            // This holds the requestAnimationFrame reference, so we can cancel it if we wish
-            let frame: number;
-            // The debounce function returns a new function that can receive a variable number of arguments
-            return (...params: any[]) => {
-                // If the frame variable has been defined, clear it now, and queue for next frame
-                if (frame) {
-                    cancelAnimationFrame(frame);
-                }
-                // Queue our function call for the next frame
-                frame = requestAnimationFrame(() => {
-                    // Call our function and pass any params we received
-                    fn(...params);
-                });
-            }
-        };
+import { Disclosure } from "@headlessui/react";
+import Link from "next/link";
+import { Bars3Icon } from "@heroicons/react/24/outline";
+import Drawer from "./Drawer";
+import Drawerdata from "./Drawerdata";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
 
-        // Reads out the scroll position and stores it in the data attribute
-        // so we can use it in our stylesheets
-        const storeScroll = () => {
-            document.documentElement.dataset.scroll = window.scrollY.toString();
-        }
-
-        // Listen for new scroll events, here we debounce our `storeScroll` function
-        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
-
-        // Update scroll position for first time
-        storeScroll();
-    }, [])
-    return (
-        <>
-            <Navbar />
-        </>
-    );
+interface NavigationItem {
+  name: string;
+  href: string;
+  current: boolean;
 }
 
-export default Navbarin;
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("#home-section");
+
+  const navigation: NavigationItem[] = [
+    { name: "Beranda", href: "#home-section", current: false },
+    { name: "Tentang Kami", href: "#cook-section", current: false },
+    { name: "Layanan", href: "#about-section", current: false },
+    { name: "Lokasi", href: "#location-section", current: false },
+    { name: "Galeri", href: "#gallery-section", current: false },
+  ];
+
+  // Menentukan bagian aktif saat scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      navigation.forEach((item) => {
+        const section = document.querySelector(item.href) as HTMLElement; // Cast ke HTMLElement
+        if (section) {
+          const offsetTop = section.offsetTop - 100; // Tambahkan offset
+          const offsetBottom = offsetTop + section.clientHeight;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(item.href);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <Disclosure as="nav" className="navbar sticky top-0 z-50 bg-white shadow-md">
+      <>
+        <div className="mx-auto max-w-7xl p-2 md:p-4 lg:px-6">
+          <div className="relative flex h-12 items-center">
+            {/* Logo untuk Mobile */}
+            <div className="flex sm:hidden flex-shrink-0 items-center">
+              <Link href="/">
+                <Image
+                  src="/images/Logo/Logo.svg"
+                  alt="logo"
+                  width={96} // Ukuran logo lebih besar untuk proporsi mobile
+                  height={96}
+                  className="w-16 h-auto"
+                />
+              </Link>
+            </div>
+
+            {/* Logo untuk Desktop */}
+            <div className="hidden sm:flex flex-shrink-0 items-center border-right">
+              <Link href="/">
+                <Image
+                  src="/images/Logo/Logo.svg"
+                  alt="logo"
+                  width={128} // Logo lebih besar untuk desktop
+                  height={128}
+                  className="w-32 h-auto"
+                />
+              </Link>
+            </div>
+
+            {/* LINKS */}
+            <div className="hidden lg:flex items-center border-right flex-1">
+              <div className="flex justify-end space-x-8">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={classNames(
+                      activeSection === item.href
+                        ? "text-black border-b-2 border-[#1B71A1]"
+                        : "text-gray-700 hover:text-black hover:border-b-2 hover:border-[#1B71A1]",
+                      "px-3 py-2 text-lg font-medium transition-all duration-300"
+                    )}
+                    aria-current={activeSection === item.href ? "page" : undefined}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Drawer Icon untuk Mobile */}
+            <div className="block lg:hidden ml-auto">
+              <Bars3Icon
+                className="block h-6 w-6"
+                aria-hidden="true"
+                onClick={() => setIsOpen(true)}
+              />
+            </div>
+
+            {/* Drawer Data */}
+            <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+              <Drawerdata />
+            </Drawer>
+          </div>
+        </div>
+      </>
+    </Disclosure>
+  );
+};
+
+export default Navbar;
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}

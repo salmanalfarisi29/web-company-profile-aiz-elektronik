@@ -93,9 +93,9 @@ const Footer = () => {
       </div>
 
       {/* COPYRIGHT */}
-      <div className="mt-12 border-t border-gray-200 pt-6">
+      <div className="mt-12 mb-4 border-t border-gray-200 pt-6">
         <p className="text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Aiz Elektronik. All rights reserved.
+          © {new Date().getFullYear()} Ais Elektronik. All rights reserved. - Developed by Creanzy.id
         </p>
       </div>
     </footer>

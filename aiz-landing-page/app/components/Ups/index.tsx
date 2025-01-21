@@ -31,7 +31,8 @@ const USPSection = () => {
   ];
 
   return (
-    <div id="usp-section" className="bg-gray-50 py-16 px-6">
+    <div id="usp-section" className="bg-gray-50 py-20 px-6 relative">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-gray-100 to-blue-100"></div>
       <div className="mx-auto max-w-7xl text-center">
         {/* Heading */}
         <Fade direction="up" triggerOnce={true}>
@@ -46,7 +47,7 @@ const USPSection = () => {
         </Fade>
 
         {/* USP Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {uspData.map((usp, index) => (
             <Fade
               direction="up"
@@ -54,20 +55,19 @@ const USPSection = () => {
               delay={index * 200} // Animasi berurutan
               key={index}
             >
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex flex-col items-center justify-between min-h-[250px]">
+              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex flex-col items-center justify-between h-full border-t-4 border-transparent hover:border-[#1B71A1]">
                 {/* Icon */}
-                <div className="w-16 h-16 flex items-center justify-center bg-[#1B71A1] rounded-full mb-4">
+                <div className="w-20 h-20 flex items-center justify-center bg-[#1B71A1] rounded-full mb-6">
                   <Image
                     src={usp.icon}
                     alt={usp.title}
-                    width={40}
-                    height={40}
-                    className="text-white"
+                    width={48}
+                    height={48}
                   />
                 </div>
 
                 {/* Title */}
-                <h4 className="text-xl font-semibold text-black mb-2 text-center">
+                <h4 className="text-xl font-semibold text-black mb-4 text-center">
                   {usp.title}
                 </h4>
 
