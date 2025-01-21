@@ -67,7 +67,7 @@ const Cook = () => {
                 servis elektronik. Kami melayani perbaikan dan pemeliharaan
                 perangkat elektronik kantor seperti mesin penghancur kertas,
                 mesin penghitung uang, mesin absensi, serta perangkat rumah
-                tangga seperti mesin cuci, TV LED, dan lainnya.
+                tangga seperti TV LED, dan lainnya.
               </p>
               <p className="text-black md:text-lg font-normal mb-12 text-start">
                 Dengan tim teknisi berpengalaman, kami berkomitmen untuk

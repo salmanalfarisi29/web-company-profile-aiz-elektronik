@@ -4,7 +4,7 @@ import Cook from './components/Cook/index';
 // import Expert from './components/Expert/index';
 import Gallery from './components/Gallery/index';
 // import Newsletter from './components/Newsletter/Newsletter';
-import ClientLogos from "./components/ClientLogos";
+// import ClientLogos from "./components/ClientLogos";
 import Lokasi from "./components/Lokasi";
 import Ups from "./components/Ups";
 
@@ -16,7 +16,7 @@ export default function Home() {
       <Cook />
       <Features />
       <Ups />
-      <ClientLogos />
+      {/* <ClientLogos /> */}
       <Lokasi />
       {/* <Expert /> */}
       <Gallery />

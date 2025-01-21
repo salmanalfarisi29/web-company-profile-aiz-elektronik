@@ -11,9 +11,9 @@ interface cardDataType {
 
 const cardData: cardDataType[] = [
   {
-    imgSrc: "/images/Features/elektronik.svg",
+    imgSrc: "/images/Features/dispenser.svg",
     heading: "Elektronik Rumahan",
-    subheading: "Melayani service mesin cuci, TV, kulkas dll",
+    subheading: "Melayani service TV, dispenser, dan lain-lain.",
   },
   {
     imgSrc: "/images/Features/mesin.svg",
@@ -26,7 +26,7 @@ const cardData: cardDataType[] = [
     subheading: "Melayani service audio dan sound system",
   },
   {
-    imgSrc: "/images/Features/dispenser.svg",
+    imgSrc: "/images/Features/elektronik.svg",
     heading: "Alat elektronik yang lainnya",
     subheading: "Service berbagai macam alat elektronik yang lainnya",
   },
