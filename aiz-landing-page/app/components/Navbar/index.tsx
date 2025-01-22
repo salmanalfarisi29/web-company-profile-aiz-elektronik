@@ -3,8 +3,8 @@
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import Drawer from "./Drawer";
-import Drawerdata from "./Drawerdata";
+import Drawer from "../Navbar/Drawer";
+import Drawerdata from "../Navbar/Drawerdata";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -31,9 +31,9 @@ const Navbar = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       navigation.forEach((item) => {
-        const section = document.querySelector(item.href) as HTMLElement; // Cast ke HTMLElement
+        const section = document.querySelector(item.href) as HTMLElement;
         if (section) {
-          const offsetTop = section.offsetTop - 100; // Tambahkan offset
+          const offsetTop = section.offsetTop - 100;
           const offsetBottom = offsetTop + section.clientHeight;
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
             setActiveSection(item.href);
@@ -48,72 +48,56 @@ const Navbar = () => {
 
   return (
     <Disclosure as="nav" className="navbar sticky top-0 z-50 bg-white shadow-md">
-      <>
-        <div className="mx-auto max-w-7xl p-2 md:p-4 lg:px-6">
-          <div className="relative flex h-12 items-center">
-            {/* Logo untuk Mobile */}
-            <div className="flex sm:hidden flex-shrink-0 items-center">
-              <Link href="/">
-                <Image
-                  src="/images/Logo/Logo.svg"
-                  alt="logo"
-                  width={96} // Ukuran logo lebih besar untuk proporsi mobile
-                  height={96}
-                  className="w-16 h-auto"
-                />
-              </Link>
-            </div>
-
-            {/* Logo untuk Desktop */}
-            <div className="hidden sm:flex flex-shrink-0 items-center border-right">
-              <Link href="/">
-                <Image
-                  src="/images/Logo/Logo.svg"
-                  alt="logo"
-                  width={128} // Logo lebih besar untuk desktop
-                  height={128}
-                  className="w-32 h-auto"
-                />
-              </Link>
-            </div>
-
-            {/* LINKS */}
-            <div className="hidden lg:flex items-center border-right flex-1">
-              <div className="flex justify-end space-x-8">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={classNames(
-                      activeSection === item.href
-                        ? "text-black border-b-2 border-[#1B71A1]"
-                        : "text-gray-700 hover:text-black hover:border-b-2 hover:border-[#1B71A1]",
-                      "px-3 py-2 text-lg font-medium transition-all duration-300"
-                    )}
-                    aria-current={activeSection === item.href ? "page" : undefined}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Drawer Icon untuk Mobile */}
-            <div className="block lg:hidden ml-auto">
-              <Bars3Icon
-                className="block h-6 w-6"
-                aria-hidden="true"
-                onClick={() => setIsOpen(true)}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0 flex items-center">
+            <Link href="/">
+              <Image
+                src="/images/Logo/Logo.svg"
+                alt="logo"
+                width={48}
+                height={48}
+                // className="w-auto h-12 lg:h-16 object-contain"
+                className="w-auto h-8 lg:h-12 object-contain"
               />
-            </div>
-
-            {/* Drawer Data */}
-            <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-              <Drawerdata />
-            </Drawer>
+            </Link>
           </div>
+
+          {/* Menu Links */}
+          <div className="hidden lg:flex items-center space-x-12">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={classNames(
+                  activeSection === item.href
+                    ? "text-black border-b-2 border-[#1B71A1]"
+                    : "text-gray-700 hover:text-black hover:border-b-2 hover:border-[#1B71A1]",
+                  "px-3 py-2 text-lg font-medium transition-all duration-300"
+                )}
+                aria-current={activeSection === item.href ? "page" : undefined}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Drawer Icon untuk Mobile */}
+          <div className="lg:hidden">
+            <Bars3Icon
+              className="block h-6 w-6"
+              aria-hidden="true"
+              onClick={() => setIsOpen(true)}
+            />
+          </div>
+
+          {/* Drawer Data */}
+          <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+            <Drawerdata />
+          </Drawer>
         </div>
-      </>
+      </div>
     </Disclosure>
   );
 };
