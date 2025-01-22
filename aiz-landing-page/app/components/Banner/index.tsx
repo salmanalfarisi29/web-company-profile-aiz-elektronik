@@ -11,7 +11,7 @@ import Link from "next/link";
 const Banner = () => {
   const whatsappNumber = "6285716294985";
   const whatsappMessage =
-    "Halo, saya tertarik dengan layanan Aiz Elektronik. Mohon informasi lebih lanjut!";
+    "Halo, saya tertarik dengan layanan Ais Elektronik. Mohon informasi lebih lanjut!";
   const [isHovered, setIsHovered] = React.useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
 
@@ -104,7 +104,7 @@ const Banner = () => {
             Solusi Terbaik <br /> untuk Perbaikan Elektronik Anda
           </h1>
           <p className="text-gray-700 lg:text-lg text-base font-normal mb-10 lg:text-start text-center">
-            Aiz Elektronik adalah penyedia jasa servis elektronik terpercaya di Jakarta Barat.
+            Ais Elektronik adalah penyedia jasa servis elektronik terpercaya di Jakarta Barat.
             Kami melayani berbagai kebutuhan perbaikan elektronik rumah tangga dan kantor.
             <br />
             <br />

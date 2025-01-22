@@ -53,17 +53,17 @@ const Cook = () => {
           <div className="col-span-6 flex flex-col justify-center lg:px-10">
             <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce>
               <h2 className="text-[#1B71A1] text-lg font-normal mb-6 ls-51 uppercase text-start">
-                Tentang Aiz Elektronik
+                Tentang Ais Elektronik
               </h2>
             </Fade>
             <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce>
               <h3 className="text-3xl lg:text-5xl font-semibold text-black mb-6 text-start">
-                Elektronik Rusak? Aiz Elektronik Solusinya!
+                Elektronik Rusak? Ais Elektronik Solusinya!
               </h3>
             </Fade>
             <Fade direction="up" delay={1000} cascade damping={1e-1} triggerOnce>
               <p className="text-black md:text-lg font-normal mb-8 text-start">
-                Aiz Elektronik adalah perusahaan yang bergerak di bidang jasa
+                Ais Elektronik adalah perusahaan yang bergerak di bidang jasa
                 servis elektronik. Kami melayani perbaikan dan pemeliharaan
                 perangkat elektronik kantor seperti mesin penghancur kertas,
                 mesin penghitung uang, mesin absensi, serta perangkat rumah

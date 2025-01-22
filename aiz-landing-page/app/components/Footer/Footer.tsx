@@ -30,7 +30,7 @@ const companyLinks = [
 
 const whatsappNumber = "6285716294985";
 const whatsappMessage =
-  "Halo, saya tertarik dengan layanan Aiz Elektronik. Mohon informasi lebih lanjut!";
+  "Halo, saya tertarik dengan layanan Ais Elektronik. Mohon informasi lebih lanjut!";
 
 const Footer = () => {
   return (
@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="flex items-center">
             <Image src="/images/Logo/Logo.svg" alt="logo" width={56} height={56} />
             <Link href="/" className="text-2xl font-semibold text-black ml-4">
-              Aiz Elektronik.
+              Ais Elektronik.
             </Link>
           </div>
           <p className="text-gray-600 text-sm mt-5 mb-8">

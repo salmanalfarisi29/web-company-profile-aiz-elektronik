@@ -26,7 +26,7 @@ const Data = () => {
 
     // Nomor WhatsApp dan pesan default
     const whatsappNumber = "6285716294985"; // Ganti dengan nomor WhatsApp Anda
-    const whatsappMessage = "Halo, saya tertarik dengan layanan Aiz Elektronik. Mohon informasi lebih lanjut!"; // Pesan default
+    const whatsappMessage = "Halo, saya tertarik dengan layanan Ais Elektronik. Mohon informasi lebih lanjut!"; // Pesan default
 
     return (
         <div className="rounded-md max-w-sm w-full mx-auto">

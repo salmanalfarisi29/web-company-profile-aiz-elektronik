@@ -42,7 +42,7 @@ const USPSection = () => {
         </Fade>
         <Fade direction="up" triggerOnce={true} delay={200}>
           <h3 className="text-3xl lg:text-5xl font-semibold text-black mb-12">
-            Mengapa Memilih Aiz Elektronik?
+            Mengapa Memilih Ais Elektronik?
           </h3>
         </Fade>
 
