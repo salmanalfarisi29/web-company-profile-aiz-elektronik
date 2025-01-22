@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <Disclosure as="nav" className="navbar sticky top-0 z-50 bg-white shadow-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
