@@ -21,7 +21,7 @@ const Banner = () => {
       const scrollPosition = window.scrollY;
       const sections = [
         { href: "#home-section" },
-        { href: "#cook-section" },
+        { href: "#About-section" },
         { href: "#about-section" },
         { href: "#location-section" },
         { href: "#gallery-section" },
@@ -130,7 +130,7 @@ const Banner = () => {
               <span className="text-lg font-semibold">Hubungi</span>
             </a>
             <Link
-              href="#cook-section"
+              href="#About-section"
               className="flex items-center justify-center border border-[#1B71A1] py-4 px-8 rounded-full text-lg font-medium text-[#1B71A1] hover:text-white hover:bg-[#1B71A1] shadow-lg transition-all duration-300 w-full md:w-auto"
             >
               Info lainnya
