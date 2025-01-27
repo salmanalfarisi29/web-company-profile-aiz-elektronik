@@ -23,7 +23,7 @@ const Navbar = () => {
     { name: "Tentang Kami", href: "#tentang-kami", current: false },
     { name: "Layanan", href: "#layanan", current: false },
     { name: "Lokasi", href: "#lokasi", current: false },
-    { name: "Galeri", href: "#layanan", current: false },
+    { name: "Galeri", href: "#galeri", current: false },
   ];
 
   // Menentukan bagian aktif saat scroll
