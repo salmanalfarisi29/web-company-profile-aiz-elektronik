@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ais-elektronik.vercel.app
+
+# Sitemaps
+Sitemap: https://ais-elektronik.vercel.app/sitemap.xml

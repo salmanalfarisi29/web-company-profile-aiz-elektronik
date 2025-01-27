@@ -1,3 +1,4 @@
+// Update to About Component for better SEO
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -7,6 +8,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import serviceAcImage from "/public/images/About/service-ac.png";
+import serviceMesinImage from "/public/images/About/service-mesin.png";
+import serviceAudioImage from "/public/images/About/service-audio.png";
 
 const About = () => {
   return (
@@ -24,26 +28,29 @@ const About = () => {
             >
               <SwiperSlide>
                 <Image
-                  src="/images/About/service-ac.png"
-                  alt="image-1"
+                  src={serviceAcImage}
+                  alt="Perbaikan AC oleh teknisi berpengalaman di Ais Elektronik, Jakarta Barat"
                   width={636}
                   height={808}
+                  placeholder="blur"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/About/service-ac (2).png"
-                  alt="image-2"
+                  src={serviceMesinImage}
+                  alt="Perawatan mesin absensi kantor oleh Ais Elektronik di Jakarta Barat"
                   width={636}
                   height={808}
+                  placeholder="blur"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/About/service-audio.png"
-                  alt="image-3"
+                  src={serviceAudioImage}
+                  alt="Perbaikan audio sound system oleh Ais Elektronik"
                   width={636}
                   height={808}
+                  placeholder="blur"
                 />
               </SwiperSlide>
             </Swiper>
@@ -53,6 +60,7 @@ const About = () => {
           <div className="col-span-6 flex flex-col justify-center lg:px-10">
             <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce>
               <h2 className="text-[#1B71A1] text-lg font-normal mb-6 ls-51 uppercase text-start">
+                {/* Tentang Ais Elektronik - Jasa Servis Elektronik Jakarta Barat */}
                 Tentang Ais Elektronik
               </h2>
             </Fade>
@@ -71,7 +79,8 @@ const About = () => {
               </p>
               <p className="text-black md:text-lg font-normal mb-12 text-start">
                 Dengan tim teknisi berpengalaman, kami berkomitmen untuk
-                memberikan layanan terbaik kepada pelanggan.
+                memberikan layanan terbaik kepada pelanggan di wilayah Jakarta
+                Barat dan sekitarnya.
               </p>
               <div className="flex justify-center lg:justify-start">
                 <button className="text-xl font-medium rounded-full text-white py-5 px-6 bg-[#1B71A1] lg:px-10 hover:bg-white hover:text-[#1B71A1] border border-[#1B71A1] transition-all duration-300">

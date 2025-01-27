@@ -1,3 +1,4 @@
+// Update to Location Component for better SEO
 "use client";
 
 import React from "react";
@@ -16,13 +17,12 @@ const Location = () => {
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
             <h3 className="text-3xl lg:text-5xl font-semibold text-black">
-              Temukan Kami di Lokasi Berikut
+              Temukan Kami di Srengseng, Jakarta Barat
             </h3>
           </Fade>
           <Fade direction="up" delay={400} triggerOnce>
             <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-              Klik pada peta untuk
-              mendapatkan petunjuk arah langsung melalui Google Maps.
+              Klik pada peta untuk mendapatkan petunjuk arah langsung melalui Google Maps.
             </p>
           </Fade>
         </div>
@@ -31,13 +31,13 @@ const Location = () => {
         <Fade direction="up" delay={600} triggerOnce>
           <div className="relative overflow-hidden rounded-3xl shadow-lg">
             <iframe
-              src="https://maps.google.com/maps?q=-6.202737,106.772348&z=15&output=embed" // Koordinat Jakarta Barat
+              src="https://maps.google.com/maps?q=-6.202737,106.772348&z=15&output=embed"
               width="100%"
               height="450"
               allowFullScreen
               loading="lazy"
               className="rounded-3xl border-0"
-              title="Lokasi Kami"
+              title="Lokasi Ais Elektronik di Srengseng, Jakarta Barat"
             ></iframe>
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-90 p-4 rounded-lg shadow-md w-[90%] sm:w-auto max-w-md sm:max-w-[calc(100%-2rem)]">
               <h4 className="text-black text-lg font-semibold text-center">
@@ -52,7 +52,7 @@ const Location = () => {
                   href="https://maps.app.goo.gl/17LzyiFXfGiW9JCcA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-black px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
+                  className="bg-blue-500 text-[#1B71A1] px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
                 >
                   Lihat di Google Maps
                 </a>

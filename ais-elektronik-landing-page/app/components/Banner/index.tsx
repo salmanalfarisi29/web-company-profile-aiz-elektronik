@@ -1,3 +1,4 @@
+// Update to Banner Component for better SEO
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -22,7 +23,7 @@ const Banner = () => {
       const sections = [
         { href: "#home-section" },
         { href: "#About-section" },
-        { href: "#about-section" },
+        { href: "#layanan-section" },
         { href: "#location-section" },
         { href: "#gallery-section" },
       ];
@@ -75,22 +76,22 @@ const Banner = () => {
     {
       image: "/images/Banner/banner-image-1.png",
       title: "Teknisi Sudah Sangat Berpengalaman",
-      description: "",
+      description: "Solusi terbaik untuk segala kebutuhan elektronik Anda."
     },
     {
       image: "/images/Banner/banner-image-2.png",
       title: "Layanan Antar-Jemput Barang",
-      description: "",
+      description: "Gratis antar-jemput untuk servis di wilayah Jakarta Barat."
     },
     {
       image: "/images/Banner/banner-image-3.png",
       title: "Bisa Melayani di Tempat (On-Site)",
-      description: "",
+      description: "Kemudahan perbaikan langsung di lokasi Anda."
     },
     {
       image: "/images/Banner/banner-image-4.png",
       title: "Banyak Promo dan Diskon",
-      description: "",
+      description: "Manfaatkan promo menarik untuk layanan servis elektronik Anda."
     },
   ];
 
@@ -101,7 +102,7 @@ const Banner = () => {
         {/* Left Content */}
         <div className="col-span-6 flex flex-col justify-center h-full">
           <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-black lg:text-start text-center">
-            Solusi Terbaik <br /> untuk Perbaikan Elektronik Anda
+            Solusi Terbaik <br /> untuk Perbaikan Elektronik di Jakarta
           </h1>
           <p className="text-gray-700 lg:text-lg text-base font-normal mb-10 lg:text-start text-center">
             Ais Elektronik adalah penyedia jasa servis elektronik terpercaya di Jakarta Barat.
@@ -123,7 +124,7 @@ const Banner = () => {
                     ? "/images/Navbar/whatsapp.svg"
                     : "/images/Navbar/whatsapp-2.svg"
                 }
-                alt="phone-image"
+                alt="Hubungi kami melalui WhatsApp"
                 width={20}
                 height={20}
               />
@@ -158,10 +159,11 @@ const Banner = () => {
                 <div className="relative flex justify-center items-center overflow-hidden rounded-xl shadow-2xl h-[500px]">
                   <Image
                     src={item.image}
-                    alt={`banner-${index}`}
+                    alt={item.title}
                     width={800}
                     height={600}
                     className="w-full h-full object-cover"
+                    priority
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white p-6">
                     <h2 className="text-3xl font-bold mb-4">{item.title}</h2>

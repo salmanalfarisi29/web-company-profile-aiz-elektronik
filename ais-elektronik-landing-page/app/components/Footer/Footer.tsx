@@ -4,7 +4,7 @@ import Image from "next/image";
 const companyLinks = [
   { name: "Beranda", href: "#home-section" },
   { name: "Tentang Kami", href: "#About-section" },
-  { name: "Layanan", href: "#about-section" },
+  { name: "Layanan", href: "#layanan-section" },
   // { name: "Klien", href: "#client-section" },
   { name: "Lokasi", href: "#location-section" },
   { name: "Galeri", href: "#gallery-section" },

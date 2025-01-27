@@ -34,7 +34,7 @@ const cardData: CardDataType[] = [
 
 const Work = () => {
   return (
-    <div className="bg-gray-50 py-20" id="about-section">
+    <div className="bg-gray-50 py-20" id="layanan-section">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="text-center mb-12">
