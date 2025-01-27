@@ -84,7 +84,7 @@ const About = () => {
               </p>
               <div className="flex justify-center lg:justify-start">
                 <button className="text-xl font-medium rounded-full text-white py-5 px-6 bg-[#1B71A1] lg:px-10 hover:bg-white hover:text-[#1B71A1] border border-[#1B71A1] transition-all duration-300">
-                  <Link href="#about-section">Layanan Kami</Link>
+                  <Link href="#layanan-section">Layanan Kami</Link>
                 </button>
               </div>
             </Fade>
