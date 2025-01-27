@@ -21,7 +21,7 @@ export default function RootLayout({
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content="jasa service elektronik, servis elektronik kantor, perbaikan mesin penghancur kertas, perbaikan kulkas, servis elektronik rumah tangga, service elektronik Jakarta Barat, jasa service elektronik Srengseng Jakarta Barat" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="google-site-verification" content="7XG5xah7eiec9pxSJYDy4BD7ZXiSYUsIBdRq" />
+        {/* <meta name="google-site-verification" content="7XG5xah7eiec9pxSJYDy4BD7ZXiSYUsIBdRq" /> */}
         <link rel="canonical" href="https://www.ais-elektronik.com" />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
