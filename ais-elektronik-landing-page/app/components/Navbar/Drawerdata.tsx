@@ -10,11 +10,11 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
     { name: 'Beranda', href: '#home-section', current: false },
-    { name: 'Tentang Kami', href: '#About-section', current: false },
-    { name: 'Layanan', href: '#layanan-section', current: false },
+    { name: 'Tentang Kami', href: '#tentang-kami', current: false },
+    { name: 'Layanan', href: '#layanan', current: false },
     // { name: 'Klien', href: '#client-section', current: false },
-    { name: 'Lokasi', href: '#location-section', current: false },
-    { name: 'Galeri', href: '#gallery-section', current: false },
+    { name: 'Lokasi', href: '#lokasi', current: false },
+    { name: 'Galeri', href: '#galeri', current: false },
 ];
 
 function classNames(...classes: string[]) {
