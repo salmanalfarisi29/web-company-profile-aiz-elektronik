@@ -5,8 +5,8 @@ import Navbar from './components/Navbar/index';
 import Footer from './components/Footer/Footer';
 
 export const metadata = {
-  title: 'Jasa Service Elektronik - Aiz Elektronik Jakarta Barat',
-  description: 'Aiz Elektronik adalah perusahaan jasa servis elektronik terpercaya di Jakarta Barat. Kami melayani perbaikan perangkat elektronik kantor seperti mesin penghancur kertas, penghitung uang, absensi, dan elektronik rumah tangga seperti mesin cuci, TV LED, audio sound system, dan lainnya.',
+  title: 'Jasa Service Elektronik - Ais Elektronik Jakarta Barat',
+  description: 'Ais Elektronik adalah perusahaan jasa servis elektronik terpercaya di Jakarta Barat. Kami melayani perbaikan perangkat elektronik kantor seperti mesin penghancur kertas, penghitung uang, absensi, dan elektronik rumah tangga seperti mesin cuci, TV LED, audio sound system, dan lainnya.',
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Aiz Elektronik",
+            "name": "Ais Elektronik",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Jl. H. Mandor Salim, Srengseng, Kec. Kembangan",
@@ -54,34 +54,34 @@ export default function RootLayout({
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Apa saja layanan yang ditawarkan Aiz Elektronik?",
+                "name": "Apa saja layanan yang ditawarkan Ais Elektronik?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Aiz Elektronik menawarkan layanan perbaikan dan pemeliharaan perangkat elektronik kantor seperti mesin penghancur kertas, penghitung uang, mesin absensi, serta perangkat elektronik rumah tangga seperti mesin cuci, kulkas, TV LED, dan audio sound system."
+                  "text": "Ais Elektronik menawarkan layanan perbaikan dan pemeliharaan perangkat elektronik kantor seperti mesin penghancur kertas, penghitung uang, mesin absensi, serta perangkat elektronik rumah tangga seperti mesin cuci, kulkas, TV LED, dan audio sound system."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Apakah Aiz Elektronik melayani perbaikan di rumah pelanggan?",
+                "name": "Apakah Ais Elektronik melayani perbaikan di rumah pelanggan?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Ya, Aiz Elektronik menyediakan layanan perbaikan langsung di rumah pelanggan untuk wilayah Jakarta Barat dan sekitarnya."
+                  "text": "Ya, Ais Elektronik menyediakan layanan perbaikan langsung di rumah pelanggan untuk wilayah Jakarta Barat dan sekitarnya."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Bagaimana cara menghubungi Aiz Elektronik?",
+                "name": "Bagaimana cara menghubungi Ais Elektronik?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Anda dapat menghubungi Aiz Elektronik melalui nomor telepon +6285716294985 atau email info@ais-elektronik.com."
+                  "text": "Anda dapat menghubungi Ais Elektronik melalui nomor telepon +6285716294985 atau email info@ais-elektronik.com."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Dimana lokasi Aiz Elektronik?",
+                "name": "Dimana lokasi Ais Elektronik?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Aiz Elektronik berlokasi di Jl. H. Mandor Salim, Srengseng, Kec. Kembangan, Jakarta Barat, 11630."
+                  "text": "Ais Elektronik berlokasi di Jl. H. Mandor Salim, Srengseng, Kec. Kembangan, Jakarta Barat, 11630."
                 }
               },
               {
@@ -89,23 +89,23 @@ export default function RootLayout({
                 "name": "Dimana service elektronik Jakarta Barat yang murah?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Aiz Elektronik menawarkan layanan service elektronik murah di Jakarta Barat dengan kualitas terbaik dan teknisi berpengalaman."
+                  "text": "Ais Elektronik menawarkan layanan service elektronik murah di Jakarta Barat dengan kualitas terbaik dan teknisi berpengalaman."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Mengapa memilih Aiz Elektronik?",
+                "name": "Mengapa memilih Ais Elektronik?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Aiz Elektronik memiliki tim teknisi berpengalaman, menggunakan peralatan modern, dan menyediakan layanan perbaikan yang cepat, efisien, serta harga yang kompetitif."
+                  "text": "Ais Elektronik memiliki tim teknisi berpengalaman, menggunakan peralatan modern, dan menyediakan layanan perbaikan yang cepat, efisien, serta harga yang kompetitif."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Apa keuntungan menggunakan layanan Aiz Elektronik?",
+                "name": "Apa keuntungan menggunakan layanan Ais Elektronik?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Keuntungan menggunakan layanan Aiz Elektronik termasuk konsultasi gratis, layanan antar-jemput barang, dan promo menarik untuk pelanggan setia."
+                  "text": "Keuntungan menggunakan layanan Ais Elektronik termasuk konsultasi gratis, layanan antar-jemput barang, dan promo menarik untuk pelanggan setia."
                 }
               },
               {
@@ -113,7 +113,7 @@ export default function RootLayout({
                 "name": "Dimana tempat service elektronik terpercaya di Jakarta Barat?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Aiz Elektronik adalah tempat terpercaya untuk perbaikan perangkat elektronik di Jakarta Barat. Dengan teknisi berpengalaman dan layanan profesional, kami memastikan perbaikan berkualitas."
+                  "text": "Ais Elektronik adalah tempat terpercaya untuk perbaikan perangkat elektronik di Jakarta Barat. Dengan teknisi berpengalaman dan layanan profesional, kami memastikan perbaikan berkualitas."
                 }
               },
               {
@@ -121,7 +121,7 @@ export default function RootLayout({
                 "name": "Apakah ada layanan perbaikan elektronik rumah tangga di Jakarta Barat?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Ya, Aiz Elektronik melayani perbaikan berbagai perangkat rumah tangga seperti mesin cuci, TV LED, dan kulkas untuk wilayah Jakarta Barat."
+                  "text": "Ya, Ais Elektronik melayani perbaikan berbagai perangkat rumah tangga seperti mesin cuci, TV LED, dan kulkas untuk wilayah Jakarta Barat."
                 }
               },
               {
@@ -129,7 +129,7 @@ export default function RootLayout({
                 "name": "Berapa biaya service elektronik di Jakarta Barat?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Biaya service elektronik di Aiz Elektronik terjangkau dan kompetitif, tergantung pada jenis perangkat dan tingkat kerusakan."
+                  "text": "Biaya service elektronik di Ais Elektronik terjangkau dan kompetitif, tergantung pada jenis perangkat dan tingkat kerusakan."
                 }
               },
               {
@@ -137,7 +137,7 @@ export default function RootLayout({
                 "name": "Bagaimana cara memastikan perangkat elektronik saya diperbaiki dengan baik?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Aiz Elektronik memastikan perangkat Anda diperbaiki dengan baik menggunakan teknisi berpengalaman dan peralatan modern. Kami juga memberikan garansi atas pekerjaan kami."
+                  "text": "Ais Elektronik memastikan perangkat Anda diperbaiki dengan baik menggunakan teknisi berpengalaman dan peralatan modern. Kami juga memberikan garansi atas pekerjaan kami."
                 }
               },
               {
@@ -145,7 +145,7 @@ export default function RootLayout({
                 "name": "Apakah ada layanan konsultasi gratis untuk perbaikan elektronik?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Ya, Aiz Elektronik menyediakan konsultasi gratis untuk membantu pelanggan memahami masalah pada perangkat mereka sebelum memutuskan untuk melakukan perbaikan."
+                  "text": "Ya, Ais Elektronik menyediakan konsultasi gratis untuk membantu pelanggan memahami masalah pada perangkat mereka sebelum memutuskan untuk melakukan perbaikan."
                 }
               }
             ]
