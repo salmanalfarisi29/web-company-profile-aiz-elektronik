@@ -32,7 +32,7 @@ const Navbar = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const whatsappNumber = "6285716294985";
-    const whatsappMessage = "Halo, saya tertarik dengan layanan Aiz Elektronik. Mohon informasi lebih lanjut!";
+    const whatsappMessage = "Halo, saya tertarik dengan layanan Ais Elektronik. Mohon informasi lebih lanjut!";
 
     return (
         <Disclosure as="nav" className="navbar">
