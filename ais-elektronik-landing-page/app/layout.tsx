@@ -47,7 +47,36 @@ export default function RootLayout({
             "url": "https://ais-elektronik.vercel.app/",
             "openingHours": "Mo-Fr 09:00-17:00",
             // "image": "https://www.ais-elektronik.com/images/Banner/banner-image.png"
-            "image": "https://ais-elektronik.vercel.app/images/Banner/banner-image-1.png"
+            "image": "https://ais-elektronik.vercel.app/images/Banner/banner-image-1.png",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "25"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "author": "Budi Setiawan",
+                "datePublished": "2023-12-20",
+                "reviewBody": "Pelayanan sangat memuaskan! Teknisi ramah dan profesional.Sangat direkomendasikan untuk service elektronik di daerah srengseng kembangan jakarta barat",
+                "name": "Review untuk Servis Elektronik di Ais Elektronik",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5"
+                }
+              },
+              {
+                "@type": "Review",
+                "author": "Siti Aminah",
+                "datePublished": "2023-12-15",
+                "reviewBody": "Harga terjangkau dan kualitas kerja luar biasa. Sangat direkomendasikan untuk service elektronik di daerah srengseng kembangan jakarta barat",
+                "name": "Review untuk Ais Elektronik",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4.5"
+                }
+              }
+            ]
           })}
         </script>
         <script type="application/ld+json">
