@@ -19,14 +19,16 @@ export default function RootLayout({
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <meta name="keywords" content="jasa service elektronik, servis elektronik kantor, perbaikan mesin penghancur kertas, perbaikan kulkas, servis elektronik rumah tangga, service elektronik Jakarta Barat, jasa service elektronik Srengseng Jakarta Barat" />
+        <meta name="keywords" content="jasa service elektronik, servis elektronik kantor, perbaikan mesin penghancur kertas, perbaikan kulkas, servis elektronik rumah tangga, service elektronik Jakarta Barat, jasa service elektronik Srengseng Jakarta Barat, service elektronik daerah jakarta barat, service elektronik kembangan, service elektronik jakarta" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* <meta name="google-site-verification" content="7XG5xah7eiec9pxSJYDy4BD7ZXiSYUsIBdRq" /> */}
-        <link rel="canonical" href="https://www.ais-elektronik.com" />
+        <link rel="canonical" href="https://ais-elektronik.vercel.app/" />
+        {/* <link rel="canonical" href="https://www.ais-elektronik.com" /> */}
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ais-elektronik.com" />
+        {/* <meta property="og:url" content="https://www.ais-elektronik.com" /> */} 
+        <meta property="og:url" content="https://ais-elektronik.vercel.app/" />
         <meta property="og:image" content="/images/Banner/banner-image.png" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -42,9 +44,10 @@ export default function RootLayout({
             },
             "telephone": "+6285716294985",
             "email": "info@ais-elektronik.com",
-            "url": "https://www.ais-elektronik.com",
+            "url": "https://ais-elektronik.vercel.app/",
             "openingHours": "Mo-Fr 09:00-17:00",
-            "image": "https://www.ais-elektronik.com/images/Banner/banner-image.png"
+            // "image": "https://www.ais-elektronik.com/images/Banner/banner-image.png"
+            "image": "https://ais-elektronik.vercel.app/images/Banner/banner-image-1.png"
           })}
         </script>
         <script type="application/ld+json">
