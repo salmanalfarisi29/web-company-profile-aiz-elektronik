@@ -17,7 +17,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Tentang Ais Elektronik - Jasa Service Elektronik Jakarta Barat</title>
+        <title>Tentang Ais Elektronik - Jasa Service Elektronik di Jakarta Barat</title>
         <meta
           name="description"
           content="Ais Elektronik menyediakan layanan perbaikan elektronik rumah tangga dan kantor. Dengan teknisi berpengalaman, kami melayani wilayah Jakarta Barat dan sekitarnya."

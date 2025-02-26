@@ -1,17 +1,24 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {}
-
-// module.exports = nextConfig
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
-    domains: ['ais-elektronik.vercel.app', 'your-custom-domain.com'], // Tambahkan domain Vercel Anda atau domain kustom
-    formats: ['image/avif', 'image/webp'], // Gunakan format modern
+    formats: ["image/avif", "image/webp"], // Pastikan format gambar modern diaktifkan
+    loader: "default",
   },
-  reactStrictMode: true, // Aktifkan mode ketat
-  swcMinify: true, // Optimasi dengan SWC
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "Content-Encoding", value: "gzip" },
+          { key: "Content-Encoding", value: "br" },
+        ],
+      },
+    ];
+  },
+  experimental: {
+    optimizeCss: true, // Mengoptimalkan Tailwind CSS
+    scrollRestoration: true, // Menyimpan posisi scroll saat navigasi
+  },
+  revalidate: 60, // Incremental Static Regeneration (ISR), regenerasi halaman setiap 60 detik
 };
-
-module.exports = nextConfig;
-
